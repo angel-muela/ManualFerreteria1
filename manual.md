@@ -1,69 +1,158 @@
+¡Entendido! Parece que el formato del manual original no se renderizó correctamente en GitHub, haciendo que se viera todo pegado y sin estilos. ¡No hay problema! He tomado el contenido que me proporcionaste y lo he reformateado usando Markdown, que es el lenguaje estándar para formatear texto en GitHub.
+
+Aquí están los cambios clave que he aplicado para que el manual sea fácil de leer y atractivo en GitHub:
+
+Títulos y Subtítulos: Usé # para los títulos principales (equivalente a <h1>) y ##, ### para los subtítulos, haciendo que el texto sea más grande y con diferentes niveles de jerarquía.
+
+Negritas y Cursivas: Apliqué **negritas** para resaltar palabras clave y *cursivas* donde sea apropiado, mejorando la legibilidad.
+
+Listas Numeradas y con Viñetas: Convertí las secciones a listas numeradas y usé viñetas (- o *) para los subpuntos, facilitando el seguimiento de los pasos.
+
+Bloques de Código: Encerré todos los comandos de terminal y fragmentos de código en bloques de código (`` para líneas o ```python para bloques multilínea), lo que mejora la visibilidad y permite copiarlos fácilmente.
+
+Emojis: Mantuve y ajusté algunos emojis para añadir un toque visual y amigable.
+
+Saltos de Línea y Párrafos: Aseguré que haya suficientes saltos de línea y que el texto esté dividido en párrafos lógicos para evitar el "todo pegado".
+
+URLs y Enlaces: Los enlaces a Bootstrap y Font Awesome están correctamente formateados.
+
+Estructura de Carpetas: Agregué un bloque de código para representar la estructura de carpetas, lo cual es muy útil visualmente.
+
+Aquí está el manual reformateado, listo para copiar y pegar directamente en un archivo .md (como README.md) en tu repositorio de GitHub. ¡Verás una gran diferencia!
+
 📖 MANUAL DE PROYECTO: FERRETERÍA EL PATITO 🦆
+
 ¡Bienvenido(a) al manual de configuración y desarrollo de la aplicación web "Ferretería El Patito"! 🛠️🛒
+
 Este documento detalla cada paso necesario para poner en marcha y entender el proyecto. Desde la configuración inicial del entorno hasta la implementación de modelos, vistas y plantillas. Se ha diseñado pensando en la legibilidad y facilidad de uso para su publicación en GitHub. ¡Vamos a ello! 👇
+
 1. ⚙️ CONFIGURACIÓN DEL ENTORNO DE DESARROLLO
+
 Esta sección te guiará a través de los pasos iniciales para preparar tu sistema y comenzar a trabajar con el proyecto. ¡Es la base! 🧱
+
 1.1. 📁 Crear la Carpeta del Proyecto
+
 Crea la carpeta principal para tu proyecto.
+
 Acción: Navega a la ruta deseada (ej. C:\IAWeb_5J\Unidad III\) y crea una carpeta con el nombre UIII_FerreteriaElPatito_0290.
+
 code
 Bash
+download
+content_copy
+expand_less
 cd C:\IAWeb_5J\Unidad III
 mkdir UIII_FerreteriaElPatito_0290
 1.2. 💻 Abrir VS Code en la Carpeta del Proyecto
+
 Abre el entorno de desarrollo VS Code sobre la carpeta que acabas de crear.
+
 Acción: Abre VS Code, ve a Archivo > Abrir carpeta... y selecciona C:\IAWeb_5J\Unidad III\UIII_FerreteriaElPatito_0290.
+
 1.3. 🚀 Abrir la Terminal en VS Code
+
 Accede a la terminal integrada de VS Code.
+
 Acción: Presiona Ctrl+Ñ o ve a Terminal > Nueva terminal. Asegúrate de que la terminal esté en la ruta raíz del proyecto: C:\IAWeb_5J\Unidad III\UIII_FerreteriaElPatito_0290.
+
 1.4. 🐍 Crear el Entorno Virtual .venv
+
 Es crucial trabajar con un entorno virtual para aislar las dependencias del proyecto. ¡Así mantendrás todo limpio! ✨
+
 Acción: Ejecuta el siguiente comando en la terminal.
+
 code
 Bash
+download
+content_copy
+expand_less
 python -m venv .venv
 1.5. 🟢 Activar el Entorno Virtual (Windows)
+
 Activa el entorno virtual para poder instalar las librerías del proyecto.
+
 Acción: Ejecuta el siguiente comando en la terminal.
+
 code
 Bash
+download
+content_copy
+expand_less
 .venv\Scripts\activate.bat
 1.6. ✨ Activar el Intérprete de Python en VS Code
+
 Asegúrate de que VS Code esté utilizando el intérprete de Python del entorno virtual.
+
 Acción: Haz clic en el intérprete actual en la barra de estado inferior de VS Code (usualmente muestra "Python X.X.X") y selecciona la opción que está dentro de .venv (ej. Python 3.x.x (.venv)).
+
 1.7. 🌐 Instalar Django
+
 Instala el framework Django dentro de tu entorno virtual. ¡El corazón de la aplicación! ❤️
+
 Acción: Ejecuta el siguiente comando en la terminal.
+
 code
 Bash
+download
+content_copy
+expand_less
 pip install django
 1.8. 🏗️ Crear el Proyecto Django backend_Ferreteria
+
 Inicializa el proyecto Django principal. El punto . al final evita crear una carpeta anidada.
+
 Acción: Ejecuta el siguiente comando en la terminal.
+
 code
 Bash
+download
+content_copy
+expand_less
 django-admin startproject backend_Ferreteria .
 1.9. ▶️ Ejecutar el Servidor de Desarrollo
+
 Verifica que Django se haya instalado y el proyecto se haya creado correctamente.
+
 Acción: Ejecuta el servidor en el puerto 8023.
+
 code
 Bash
+download
+content_copy
+expand_less
 python manage.py runserver 8023
+
 Verificación: Abre tu navegador y navega a http://127.0.0.1:8023. Deberías ver la página de bienvenida de Django. ¡Si es así, todo va viento en popa! 🌬️
+
 1.10. ➕ Crear la Aplicación Django app_Ferreteria
+
 Crea la aplicación específica para la lógica de la ferretería. ¡Aquí es donde vivirá tu negocio! 🏪
+
 Acción: Abre una nueva terminal (o detén el servidor con Ctrl+C y luego ejecuta el comando).
+
 code
 Bash
+download
+content_copy
+expand_less
 python manage.py startapp app_Ferreteria
 2. 🗄️ DESARROLLO DE MODELOS DE DATOS
+
 En esta sección, definiremos la estructura de la base de datos de la ferretería utilizando los modelos de Django. ¡Es como construir los cimientos! 🏗️
+
 2.1. 📝 Definir Modelos en models.py
+
 Define los modelos Usuario, Categoria, Sucursal, Producto, Carrito, Pedido y DetallePedido.
+
 Ubicación: Abre el archivo UIII_FerreteriaElPatito_0290\app_Ferreteria\models.py.
+
 Código: Pega el siguiente código, reemplazando el contenido existente.
+
 code
 Python
+download
+content_copy
+expand_less
 from django.db import models
 from django.contrib.auth.hashers import make_password # Para hashear contraseñas
 from django.contrib.auth.models import BaseUserManager, AbstractUser
@@ -192,25 +281,47 @@ class DetallePedido(models.Model):
     def get_total_detalle(self):
         return self.cantidad * self.precio_unitario
 2.2. 💾 Realizar Migraciones de la Base de Datos
+
 Crea y aplica los cambios de los modelos a la base de datos. ¡Esto transforma tus definiciones en tablas reales! 📊
+
 Acción: Ejecuta los siguientes comandos en la terminal.
+
 code
 Bash
+download
+content_copy
+expand_less
 python manage.py makemigrations
 python manage.py migrate
+
 Crear Superusuario: Después de las migraciones iniciales, necesitarás un superusuario para acceder al panel de administración y empezar a agregar datos. ¡Es tu llave maestra! 🔑
+
 code
 Bash
+download
+content_copy
+expand_less
 python manage.py createsuperuser
+
 Sigue las instrucciones en la terminal para crear el usuario (correo y contraseña).
+
 3. 🎯 VISTAS, PLANTILLAS Y CONFIGURACIÓN DE URLS
+
 Aquí implementaremos la lógica de la aplicación, las interfaces de usuario y cómo se enlazan. ¡Es donde la magia sucede para el usuario! 🪄
+
 3.1. 👩‍💻 Crear las Vistas en views.py
+
 Implementa las funciones que manejarán la lógica de cada página (renderizado, autenticación, carrito, pedidos).
+
 Ubicación: Abre el archivo UIII_FerreteriaElPatito_0290\app_Ferreteria\views.py.
+
 Código: Pega el siguiente código, reemplazando el contenido existente.
+
 code
 Python
+download
+content_copy
+expand_less
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Sucursal, Producto, Usuario, Carrito, Categoria, Pedido, DetallePedido
 from django.contrib.auth.hashers import make_password, check_password # Para hashear y verificar contraseñas
@@ -446,24 +557,40 @@ def ver_detalle_pedido(request, pedido_id):
         messages.error(request, 'Debes iniciar sesión para ver los detalles del pedido.')
         return redirect('iniciar_sesion')
     
-    pedido = get_object_or_or_404(Pedido, id=pedido_id, usuario__id=request.session['usuario_id'])
+    pedido = get_object_or_404(Pedido, id=pedido_id, usuario__id=request.session['usuario_id'])
     detalles = DetallePedido.objects.filter(pedido=pedido).select_related('producto')
     
     return render(request, 'detalle_pedido.html', {'pedido': pedido, 'detalles': detalles})
 3.2. 📂 Crear la Carpeta templates
+
 Esta carpeta contendrá todos los archivos HTML de las vistas. ¡Donde se diseñarán tus páginas! 🎨
+
 Acción: Crea una carpeta llamada templates dentro de UIII_FerreteriaElPatito_0290\app_Ferreteria.
+
 code
 Bash
+download
+content_copy
+expand_less
 mkdir app_Ferreteria\templates
 3.3. 📄 Crear los Archivos HTML (Plantillas)
+
 Crea los siguientes archivos HTML dentro de app_Ferreteria\templates\.
+
 3.3.1. 📜 base.html (Plantilla Base)
+
 Esta plantilla define la estructura general de todas las páginas, incluyendo la navegación y estilos globales.
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\base.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -713,11 +840,19 @@ Html
 </body>
 </html>
 3.3.2. 🏠 inicio.html (Página de Inicio)
+
 La página de bienvenida de la ferretería. ¡Tu escaparate principal! 🛍️
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\inicio.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -744,11 +879,19 @@ Html
     </div>
 {% endblock %}
 3.3.3. 🛒 carrito.html (Carrito de Compras)
+
 Muestra los productos que el usuario ha añadido a su carrito. ¡Donde se guardan los tesoros! 💰
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\carrito.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -815,11 +958,19 @@ Html
     </div>
 {% endblock %}
 3.3.4. 🚪 cerrar.html (Página de Cerrar Sesión)
+
 Una página simple para confirmar el cierre de sesión. ¡Hasta pronto! 👋
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\cerrar.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -840,11 +991,19 @@ Html
     </div>
 {% endblock %}
 3.3.5. 🔑 iniciar.html (Página de Iniciar Sesión)
+
 Formulario para que los usuarios accedan a su cuenta.
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\iniciar.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -876,11 +1035,19 @@ Html
     </div>
 {% endblock %}
 3.3.6. 🛍️ productos.html (Catálogo de Productos)
+
 Muestra la lista de productos disponibles, con filtrado por categoría. ¡El corazón de tu inventario! 💖
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\productos.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -940,11 +1107,19 @@ Html
     </div>
 {% endblock %}
 3.3.7. 📍 sucursales.html (Información de Sucursales)
+
 Muestra los detalles de las diferentes sucursales de la ferretería. ¡Encuentra la más cercana! 🗺️
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\sucursales.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -989,11 +1164,19 @@ Html
     </div>
 {% endblock %}
 3.3.8. 📝 crear_cuenta.html (Registro de Usuarios)
+
 Formulario para que los nuevos usuarios creen una cuenta. Incluye confirmación de contraseña y validación básica. ¡El primer paso para ser cliente! 🧑‍💻
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\crear_cuenta.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -1041,11 +1224,19 @@ Html
     </div>
 {% endblock %}
 3.3.9. 📦 pedidos.html (Historial de Pedidos del Usuario)
+
 Muestra una lista de todos los pedidos que un usuario ha realizado. ¡Tu historial de compras! 🧾
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\pedidos.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -1094,11 +1285,19 @@ Html
     </div>
 {% endblock %}
 3.3.10. 📝 detalle_pedido.html (Detalle de un Pedido Específico)
+
 Muestra la información detallada de un pedido en particular, incluyendo los productos comprados.
+
 Ubicación: UIII_FerreteriaElPatito_0290\app_Ferreteria\templates\detalle_pedido.html
+
 Código:
+
 code
 Html
+play_circle
+download
+content_copy
+expand_less
 {% extends 'base.html' %}
 {% load static %}
 
@@ -1151,11 +1350,18 @@ Html
     </div>
 {% endblock %}
 3.4. 🔗 Configurar URLs de la Aplicación en app_Ferreteria\urls.py
+
 Define las rutas URL específicas para cada vista de la aplicación. ¡Así se navega! 🗺️
+
 Ubicación: Abre el archivo UIII_FerreteriaElPatito_0290\app_Ferreteria\urls.py.
+
 Código: Pega el siguiente código, reemplazando el contenido existente.
+
 code
 Python
+download
+content_copy
+expand_less
 from django.urls import path
 from . import views
 
@@ -1176,11 +1382,18 @@ urlpatterns = [
     path('pedidos/<int:pedido_id>/', views.ver_detalle_pedido, name='ver_detalle_pedido'),
 ]
 3.5. ✅ Registrar app_Ferreteria en backend_Ferreteria\settings.py
+
 Informa a Django sobre la existencia de tu nueva aplicación. También se incluyen configuraciones para archivos estáticos y mensajes. ¡Django necesita saber de ella! 📣
+
 Ubicación: Abre el archivo UIII_FerreteriaElPatito_0290\backend_Ferreteria\settings.py.
+
 Acción: Agrega 'app_Ferreteria' a la lista INSTALLED_APPS y asegura que las configuraciones de STATIC_URL y STATICFILES_DIRS sean correctas. También se añaden MESSAGE_TAGS para un estilo consistente de los mensajes de Django.
+
 code
 Python
+download
+content_copy
+expand_less
 # ... (otras configuraciones) ...
 
 INSTALLED_APPS = [
@@ -1215,11 +1428,18 @@ MESSAGE_TAGS = {
 # Opcional: Si se hubiera usado un modelo de usuario personalizado que hereda de AbstractUser
 # AUTH_USER_MODEL = 'app_Ferreteria.Usuario'
 3.6. 🌐 Enlazar URLs de app_Ferreteria en backend_Ferreteria\urls.py
+
 Conecta las URLs de tu aplicación app_Ferreteria con el proyecto principal. ¡La puerta de entrada a tu app! 🚪
+
 Ubicación: Abre el archivo UIII_FerreteriaElPatito_0290\backend_Ferreteria\urls.py.
+
 Acción: Agrega path('', include('app_Ferreteria.urls')) a la lista urlpatterns. También se añade la configuración de static para servir archivos estáticos en modo depuración.
+
 code
 Python
+download
+content_copy
+expand_less
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -1235,11 +1455,18 @@ if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # Si usaras archivos de medios
 3.7. ⚙️ Registrar Modelos en admin.py
+
 Habilita la administración de tus modelos a través del panel de administración de Django. ¡Tu centro de control! 🎮
+
 Ubicación: Abre el archivo UIII_FerreteriaElPatito_0290\app_Ferreteria\admin.py.
+
 Código: Pega el siguiente código, reemplazando el contenido existente.
+
 code
 Python
+download
+content_copy
+expand_less
 from django.contrib import admin
 from .models import Sucursal, Producto, Usuario, Carrito, Categoria, Pedido, DetallePedido
 
@@ -1251,73 +1478,35 @@ admin.site.register(Carrito)
 admin.site.register(Categoria)
 admin.site.register(Pedido)
 admin.site.register(DetallePedido)
+
 Migraciones y Superusuario: Después de registrar los modelos, es una buena práctica volver a ejecutar makemigrations y migrate por si hay cambios en la estructura de admin.py que requieran actualización, y asegurarte de que tu superusuario está actualizado.
+
 code
 Bash
+download
+content_copy
+expand_less
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser # Si no lo hiciste antes o necesitas actualizar
 4. 🖼️ ARCHIVOS ESTÁTICOS (IMÁGENES)
+
 Prepara la carpeta para almacenar tus imágenes y otros archivos estáticos. ¡Los elementos visuales de tu tienda! 📸
+
 4.1. 📁 Crear la Carpeta static y img
+
 Crea la estructura de carpetas necesaria para los archivos estáticos.
+
 Acción: Dentro de app_Ferreteria, crea una carpeta llamada static, y dentro de static, crea otra llamada img.
+
 Estructura resultante: UIII_FerreteriaElPatito_0290\app_Ferreteria\static\img\
+
 Imágenes Necesarias: Coloca los archivos buscar.png, ferreteria_principal.png y default_product.png dentro de la carpeta img. Estas imágenes son referenciadas en las plantillas HTML.
+
 buscar.png: Icono para el enlace "Buscar Productos".
+
 ferreteria_principal.png: Imagen principal para la página de inicio.
+
 default_product.png: Imagen de reemplazo para productos que no tienen una imagen_url definida.
+
 Aquí tienes una representación de cómo se vería la imagen principal de la ferretería:
-Generated Image November 18, 2025 - 6:23PM.png
-Generated Image November 18, 2025 - 6:23PM.png
-5. 🚀 EJECUCIÓN FINAL DEL PROYECTO
-Una vez completados todos los pasos, tu proyecto está listo para ser ejecutado y probado. ¡El momento de la verdad! 🥳
-5.1. ▶️ Ejecutar el Servidor en el Puerto 8036
-Inicia el servidor de desarrollo en el puerto especificado.
-Acción: Asegúrate de que tu entorno virtual esté activado y ejecuta el siguiente comando en la terminal.
-code
-Bash
-python manage.py runserver 8036
-Verificación: Abre tu navegador y navega a http://127.0.0.1:8036. ¡Tu aplicación de ferretería debería estar completamente funcional! 🎉
-Panel de Administración: Puedes acceder al panel de administración en http://127.0.0.1:8036/admin usando las credenciales del superusuario que creaste. Desde allí, podrás añadir sucursales, categorías, productos, usuarios (y ver carritos, pedidos, detalles de pedidos) para poblar la base de datos y probar todas las funcionalidades.
-6. 🌳 ESTRUCTURA DE ARCHIVOS DEL PROYECTO (RESUMEN VISUAL)
-Aquí se detalla la estructura final de tu proyecto, lo que te ayudará a navegar por el código y verificar que todos los archivos estén en su lugar correcto. ¡Una guía clara! 🧭
-code
-Code
-UIII_FerreteriaElPatito_0290/
-├── .venv/                      # Entorno virtual
-├── backend_Ferreteria/         # Proyecto Django principal
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py             # Configuración del proyecto
-│   ├── urls.py                 # URLs principales
-│   └── wsgi.py
-├── app_Ferreteria/             # Aplicación Django de la ferretería
-│   ├── migrations/             # Migraciones de la base de datos
-│   ├── static/                 # Archivos estáticos
-│   │   └── img/
-│   │       ├── buscar.png
-│   │       ├── default_product.png
-│   │       └── ferreteria_principal.png
-│   ├── templates/              # Plantillas HTML
-│   │   ├── base.html
-│   │   ├── carrito.html
-│   │   ├── cerrar.html
-│   │   ├── crear_cuenta.html
-│   │   ├── detalle_pedido.html
-│   │   ├── iniciar.html
-│   │   ├── inicio.html
-│   │   ├── pedidos.html
-│   │   ├── productos.html
-│   │   └── sucursales.html
-│   ├── __init__.py
-│   ├── admin.py                # Registro de modelos en el admin
-│   ├── apps.py
-│   ├── models.py               # Definición de modelos de datos
-│   ├── tests.py
-│   ├── urls.py                 # URLs de la aplicación
-│   └── views.py                # Lógica de las vistas
-├── db.sqlite3                  # Base de datos SQLite (generada por Django)
-├── manage.py                   # Utilidad de línea de comandos de Django
-└── README.md                   # (Este manual, si lo copias aquí)
-¡Eso es todo! 🎉 Este manual debería ser perfecto para tu repositorio de GitHub: claro, conciso y fácil de seguir. ¡Mucho éxito con tu "Ferretería El Patito"! 🦆✨
